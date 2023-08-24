@@ -7,34 +7,37 @@
       ./machines/xps/configuration.nix
       # main pc
 
+      #Graphical
+      ./graphical/kde.nix
+
       #system
       ./system/system.nix
 
+      #users
+      ./users/users.nix
+
       #Applications
       ./apps/default.nix
+      ./apps/steam.nix
+      ./apps/waydroid.nix
+
+      #Services
+      ./services/flatpak.nix
+      ./services/openssh.nix
+      ./services/printing.nix
+
     ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "de";
-    xkbVariant = "";
-  };
-
-  # Configure console keymap
-  console.keyMap = "de";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  system.autoUpgrade = {
+    enable=true;
+    persistent=true;
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

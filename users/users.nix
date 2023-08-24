@@ -5,6 +5,6 @@
     isNormalUser = true;
     description = "Renè";
     extraGroups = [ "networkmanager" "wheel" ];
-    init
+    initialPassword = "123";
   };
 }
