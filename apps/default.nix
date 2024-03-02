@@ -21,9 +21,19 @@
     neovim
     remmina
     lutris
-    bitwarden
+    #bitwarden
     discord
     lunatask
     kdeconnect
+    teamviewer
+    protonvpn-gui
+    transmission-qt
+    docker-compose
+    qemu
+    libvirt
+    virt-manager
   ];
+
+  programs.kdeconnect.enable = true;
+    services.teamviewer.enable = true;
 }

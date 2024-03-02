@@ -11,4 +11,6 @@
       ./shell.nix
       ./fonts.nix
     ];
+
+    virtualisation.libvirtd.enable=true;
 }

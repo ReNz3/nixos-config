@@ -4,7 +4,7 @@
   users.users.rene = {
     isNormalUser = true;
     description = "Renè";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "kvm" "libvirtd" "input" ];
     initialPassword = "123";
   };
 }
